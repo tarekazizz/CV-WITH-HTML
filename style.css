@@ -1,0 +1,181 @@
+:root {
+    --primary: #4b2c5e;    
+    --secondary: #d4a373;  
+    --accent: #ff758c;    
+    --bg-body: #fff9fa;   
+    --white: #ffffff;
+    --text-main: #2d3436;
+    --shadow: 0 10px 40px rgba(75, 44, 94, 0.1);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    background: var(--bg-body); 
+    color: var(--text-main); 
+    font-family: 'Poppins', sans-serif; 
+    line-height: 1.6;
+}
+html { scroll-behavior: smooth; }
+.main-header {
+    background: var(--primary);
+    height: 75px;
+    position: fixed;
+    top: 0; width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.nav-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo { 
+    color: white; 
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; 
+    font-size: 24px; 
+}
+.logo span { color: var(--secondary); }
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: #f0e6f2; text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: var(--secondary); }
+.btn-download {
+    background: var(--secondary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--primary);
+}
+.cv-wrapper {
+    margin-top: 120px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.cv-card {
+    width: 210mm;
+    background: var(--white);
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+.sidebar {
+    width: 32%;
+    background: var(--primary);
+    color: white;
+    padding: 40px 25px;
+}
+.profile-frame {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary);
+    overflow: hidden;
+    background: #eee;
+}
+.profile-frame img { width: 100%; height: 100%; object-fit: cover; }
+.sidebar-section { margin-bottom: 35px; }
+.sidebar-section h3 {
+    font-size: 15px;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+.contact-info strong { display: block; font-size: 12px; margin-top: 12px; color: var(--secondary); }
+.contact-info p { font-size: 13px; color: #e0d5e8; }
+.tag-list li {
+    display: inline-block;
+    background: rgba(212, 163, 115, 0.2);
+    border: 1px solid var(--secondary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    margin: 0 5px 8px 0;
+}
+.main-body {
+    width: 68%;
+    padding: 50px 45px;
+}
+.name-heading { margin-bottom: 45px; }
+.name-heading h1 { 
+    font-family: 'Playfair Display', serif;
+    font-size: 42px; 
+    color: var(--primary); 
+}
+.name-heading .subtitle { 
+    color: var(--secondary); 
+    font-weight: 600; 
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px; 
+}
+.section-title {
+    font-size: 18px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.section-title::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, var(--secondary), transparent);
+    margin-left: 15px;
+}
+.table-container {
+    overflow-x: auto;
+    margin-top: 10px;
+}
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.result-table th {
+    background: #f8f1f5;
+    color: var(--primary);
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid var(--secondary);
+}
+.result-table td {
+    padding: 12px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.result-table tr:hover {
+    background-color: #fffcfd;
+}
+.job-item { margin-bottom: 25px; }
+.job-header { display: flex; justify-content: space-between; font-weight: 700; color: var(--primary); }
+.date { font-size: 12px; color: var(--accent); }
+.work-desc { padding-left: 20px; font-size: 13px; margin-top: 5px; }
+.cv-footer {
+    text-align: center;
+    padding: 50px;
+    color: var(--primary);
+}
+.social-icons a { 
+    color: var(--primary); 
+    font-size: 22px; 
+    margin: 0 12px; 
+    transition: 0.3s; 
+}
+.social-icons a:hover { color: var(--accent); }
+@media (max-width: 850px) {
+    .cv-card { flex-direction: column; width: 100%; border-radius: 0; }
+    .sidebar, .main-body { width: 100%; }
+    .nav-links { display: none; }
+}
