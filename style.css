@@ -179,3 +179,8 @@ html { scroll-behavior: smooth; }
     .sidebar, .main-body { width: 100%; }
     .nav-links { display: none; }
 }
+.nav-links a.active {
+    color: var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 4px;
+}
